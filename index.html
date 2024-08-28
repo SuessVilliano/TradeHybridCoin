@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trade Hybrid Coin (THC) - Empowering traders with innovative tools and financial freedom through our unique crypto ecosystem.">
+    <meta name="keywords" content="Trade Hybrid Coin, THC, cryptocurrency, staking, governance, trading tools, crypto community">
+    <meta name="author" content="Trade Hybrid Coin">
+    <title>Trade Hybrid Coin (THC) - Cyberpunk Theme</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #833ab4, #00f5a0);
+            color: white;
+            overflow-x: hidden;
+            transition: background 0.5s ease-in-out;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #00f5a0;
+            transition: color 0.3s;
+        }
+
+        header h1:hover {
+            color: #833ab4;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #00f5a0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #833ab4;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #00f5a0, #833ab4);
+            animation: gradientMove 10s infinite alternate;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            background: #833ab4;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .hero a:hover {
+            background: #00f5a0;
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 60px 20px;
+            transition: transform 0.3s;
+        }
+
+        .section h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        .tokenomics, .staking {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta a {
+            padding: 15px 30px;
+            background: #00f5a0;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta a:hover {
+            background: #833ab4;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        @keyframes gradientMove {
+            from {
+                background-position: 0% 50%;
+            }
+            to {
+                background-position: 100% 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Trade Hybrid Coin (THC)</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#staking">Staking & Vaults</a>
+            <a href="#governance">Governance</a>
+            <a href="#community">Community & Events</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to Trade Hybrid Coin</h2>
+        <p>Your Gateway to Innovative Trading Solutions and Financial Freedom</p>
+        <a href="#staking">Get Started</a>
+    </section>
+
+    <section id="about" class="section">
+        <h3>About Trade Hybrid</h3>
+        <p>Trade Hybrid is a revolutionary trading community offering a range of financial tools, education, and investment opportunities. Our mission is to empower traders and investors by providing cutting-edge technology and strategies, all powered by our native token, THC.</p>
+    </section>
+
+    <section id="tokenomics" class="section tokenomics">
+        <h3>Tokenomics</h3>
+        <p>Breakdown of THC’s total supply, allocation, and staking rewards. Our interactive charts will show how tokens are distributed and the utility they provide in our ecosystem.</p>
+        <canvas id="tokenomicsChart" width="400" height="200"></canvas>
+    </section>
+
+    <section id="staking" class="section staking">
+        <h3>Staking & Vaults</h3>
+        <p>Stake your THC tokens in our various vaults to earn rewards. Choose from different APYs, staking periods, and reward options to maximize your returns.</p>
+        <!-- Add staking instructions and APY details here -->
+    </section>
+
+    <section id="governance" class="section">
+        <h3>Governance</h3>
+        <p>Participate in our decentralized governance model. Stake your THC to vote on proposals and help shape the future of the Trade Hybrid ecosystem. Check out active proposals and past voting results.</p>
+    </section>
+
+    <section id="community" class="section">
+        <h3>Community & Events</h3>
+        <p>Join our vibrant community. Stay informed about upcoming events, trading competitions, and networking opportunities. Connect with us on Discord and social media.</p>
+    </section>
+
+    <section id="documentation" class="section">
+        <h3>Documentation</h3>
+        <p>Access our white paper, FAQs, and guides to learn more about THC. Developers can explore our API documentation to integrate THC into their projects.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or inquiries, feel free to reach out to us. Connect with us on social media or through our community channels.</p>
+        <!-- Add a contact form here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Trade Hybrid Coin. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactive charts
+        const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        const tokenomicsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Liquidity & Staking', 'Community & Airdrops', 'Team & Development', 'Advisors & Partnerships', 'Treasury', 'Reserve'],
+                datasets: [{
+                    data: [50, 20, 10, 5, 10, 5],
+                    backgroundColor: [
+                        '#833ab4',
+                        '#00f5a0',
+                        '#f2994a',
+                        '#2d9cdb',
+                        '#e94e77',
+                        '#8e44ad'
+                    ],
+                    borderWidth: 1,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Additional JavaScript for interactivity, modals, etc.
+    </script>
+</body>
+</html>
